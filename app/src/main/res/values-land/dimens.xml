@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="gallery_columns">2</integer>
+    <dimen name="padding_main">0dp</dimen>
+    <dimen name="layout_weight_main">1</dimen>
+</resources>

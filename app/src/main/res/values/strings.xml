@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Caloriya</string>
+    <string name="popular_recipes">Popular Recipes</string>
+    <string name="my_recipes">My Recipes</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="steps">Steps</string>
+    <string name="fab">Fab</string>
+    <string name="steps_descr">The steps for this recipe can be found at:</string>
+    <string name="recipe_url">http://api.yummly.com/v1/api/recipes?</string>
+    <string name="recipe_detail_url">http://api.yummly.com/v1/api/recipe/</string>
+    <string name="time_hint">Prep Time \nin Minutes</string>
+    <string name="recipe_image">Recipe Image</string>
+    <string name="source">Source:\u0020</string>
+    <string name="error_message">Enter valid weight!</string>
+    <string name="unspecified">Not Available, Check The Link Below</string>
+    <string name="unknown">Unknown</string>
+    <string name="progress_bar">Progress Bar</string>
+    <string name="time_filter">Filter By Time</string>
+    <string name="filter">Filter</string>
+    <string name="button">Button</string>
+    <string name="estimate_calories">Estimate Your Daily Calories</string>
+    <string name="weight_pounds">My Weight in Pounds</string>
+    <string name="calculate">Calculate</string>
+    <string name="calories_txt">0 kcal/day</string>
+    <string name="widget_title">Caloriya\n(My Recipes)</string>
+    <string-array name="goal_array">
+        <item>Loose Weight</item>
+        <item>Maintain Weight</item>
+        <item>Gain Weight</item>
+    </string-array>
+    <string name="appwidget_text">RECIPES</string>
+    <string name="add_widget">Add widget</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

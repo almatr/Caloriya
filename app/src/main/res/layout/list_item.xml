@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/frame_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/frame_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/recipe_image"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/recipe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_main"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:text="@string/recipe_name"
+        android:textAllCaps="false"
+        android:textSize="@dimen/txt_central"
+        android:textStyle="bold"
+        android:background="@color/colorGray"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/recipe_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/padding_main"
+        android:padding="@dimen/padding_sm"
+        android:textSize="@dimen/txt_large"
+        android:textStyle="bold"
+        android:background="@color/colorGray"
+        android:textColor="@color/colorWhite"/>
+</FrameLayout>

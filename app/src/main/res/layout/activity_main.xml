@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        app:layout_collapseMode="pin"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/pacifico"
+            android:text="@string/app_name"
+            android:textSize="@dimen/txt_title"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+    </android.support.v7.widget.Toolbar>
+    
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/layout_weight"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:paddingLeft="@dimen/list_side_margin"
+            android:paddingStart="@dimen/list_side_margin"
+            android:paddingRight="@dimen/list_side_margin"
+            android:paddingEnd="@dimen/list_side_margin"
+            android:paddingBottom="@dimen/recycler_paddingBottom">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/progressBarMargin"
+            android:minHeight="@dimen/dimen_progress"
+            android:minWidth="@dimen/dimen_progress"
+            android:contentDescription="@string/progress_bar"/>
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true"
+            android:minHeight="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorAccent"
+                app:expandedTitleMarginStart="@dimen/titleMargin_start"
+                app:expandedTitleMarginEnd="@dimen/titleMargin_end">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/padding_main"
+                android:background="@color/colorPrimaryLight"
+                android:elevation="@dimen/elevation">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight= "@dimen/layout_weight_main"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_sm">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/padding_main"
+                        android:text="@string/time_filter"
+                        android:textSize="@dimen/txt_large"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/calories_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/time_hint"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textSize="@dimen/txt_medium" />
+
+                    <Button
+                        android:id="@+id/filter_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:linksClickable="true"
+                        android:onClick="filterResultByTime"
+                        android:text="@string/filter"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_medToLarge"
+                        android:textStyle="bold"
+                        android:contentDescription="@string/button"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/small_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="45dp"
+                    android:layout_marginLeft="@dimen/view_sideMargin"
+                    android:layout_marginStart="@dimen/view_sideMargin"
+                    android:layout_marginTop="@dimen/view_topMargin"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_main"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/padding_sm"
+                    android:paddingLeft="@dimen/padding_sm"
+                    android:paddingRight="@dimen/padding_sm"
+                    android:paddingStart="@dimen/padding_sm">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_sm"
+                        android:text="@string/estimate_calories"
+                        android:textSize="@dimen/txt_large"
+                        android:textStyle="bold|italic" />
+
+                    <EditText
+                        android:id="@+id/weight_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/weight_pounds"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textSize="@dimen/txt_medToLarge" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/padding_main"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding_sm" />
+
+                    <Button
+                        android:id="@+id/calories_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:onClick="calculateCalories"
+                        android:text="@string/calculate"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/txt_medToLarge"
+                        android:textStyle="bold"
+                        android:contentDescription="@string/button"/>
+
+                    <TextView
+                        android:id="@+id/calories_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/calories_txt"
+                        android:textSize="@dimen/txt_large"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/linear_height"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_main">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/txt_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="start"
+                    android:onClick="displayPopularRecipes"
+                    android:text="@string/popular_recipes"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="@dimen/txt_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/favorites_link"
+                    android:layout_width="@dimen/txt_width"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="end"
+                    android:onClick="displayFavoriteRecipes"
+                    android:text="@string/my_recipes"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="@dimen/txt_large"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
+
+
+
+
+

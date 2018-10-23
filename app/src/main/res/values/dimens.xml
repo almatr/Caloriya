@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_side_margin">4dp</dimen>
+    <dimen name="recycler_paddingBottom">28dp</dimen>
+    <dimen name="list_toolbar_side_margin">0dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="txt_sideMargin">16dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="txt_central">24sp</dimen>
+    <dimen name="padding_main">10dp</dimen>
+    <dimen name="layout_weight_main">0</dimen>
+    <dimen name="padding_sm">5dp</dimen>
+    <dimen name="txt_medium">14sp</dimen>
+    <dimen name="txt_medToLarge">16sp</dimen>
+    <dimen name="txt_large">18sp</dimen>
+    <dimen name="txt_title">28sp</dimen>
+    <dimen name="frame_margin">8dp</dimen>
+    <dimen name="frame_height">250dp</dimen>
+    <dimen name="progressBarMargin">100dp</dimen>
+    <dimen name="dimen_progress">50dp</dimen>
+    <dimen name="padding_collapse">50dp</dimen>
+    <dimen name="padding_collapse_bottom">30dp</dimen>
+    <dimen name="titleMargin_start">48dp</dimen>
+    <dimen name="titleMargin_end">64dp</dimen>
+    <dimen name="button_height">33dp</dimen>
+    <dimen name="small_width">3dp</dimen>
+    <dimen name="view_sideMargin">25dp</dimen>
+    <dimen name="view_topMargin">35dp</dimen>
+    <dimen name="linear_height">45dp</dimen>
+    <dimen name="txt_width">170dp</dimen>
+    <dimen name="collapse_height">270dp</dimen>
+    <dimen name="layout_txt_width">295dp</dimen>
+    <integer name="gallery_columns">1</integer>
+    <integer name="layout_weight">1</integer>
+    <integer name="txt_lines">3</integer>
+
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+</resources>
