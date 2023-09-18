@@ -2,11 +2,11 @@
 
 This application requires API key and App ID from Yummly. In order to obtain both there are 3 important steps to follow. 
 
-Step 1 : visit https://developer.yummly.com and scroll down, click on “Request Academic Plan” to receive a free plan. After clicking on this button, fill out the form with the relevant email address and submit. 
+Step 1 : Visit https://developer.yummly.com and scroll down, click on “Request Academic Plan” to receive a free plan. After clicking on this button, fill out the form with the relevant email address and submit. 
 
-Step 2: visit https://developer.yummly.com/contact and fill out the form with the relevant email address. In the comments section, describe that you have submitted the request for the API key and ask them kindly to approve your request.
+Step 2: Visit https://developer.yummly.com/contact and fill out the form with the relevant email address. In the comments section, describe that you have submitted the request for the API key and ask them kindly to approve your request.
 
-Step 3: check your email to see if you received an approval (usually in about few hours after doing step 2 you will receive approval)
+Step 3: Check your email to see if you received an approval (usually in about few hours after doing step 2 you will receive approval)
 
 
 
