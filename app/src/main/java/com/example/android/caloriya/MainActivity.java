@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
             mMenuPosition = 1;
         }
 
-        //clear keyboard on scroll
+        //clear keyboard on scroll for screen visibility 
         mRecyclerView.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
-
+        
     private void checkNetwork(ArrayList<URL> recipeIdUrl) {
         NetworkCheck check = new NetworkCheck(this,mRecyclerView);
         if (check.isNetworkAvailable() && check.isOnline()){
